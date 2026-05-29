@@ -1,0 +1,430 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap');
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #0a0a0a !important;
+    border: none !important;
+    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .lp-wrap {
+    background: #0a0a0a;
+    color: #f0f0f0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lp-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── HERO ── */
+  .lp-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #0d2a0d 0%, transparent 70%);
+    width: 100%;
+  }
+
+  .lp-tag {
+    display: inline-block;
+    background: #39FF14;
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .lp-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 16vw, 130px);
+    line-height: .95;
+    color: #f0f0f0;
+  }
+
+  .lp-hero h1 span { color: #39FF14; }
+
+  .lp-hero-sub {
+    margin-top: 16px;
+    font-size: clamp(16px, 4vw, 20px);
+    color: #888;
+    line-height: 1.5;
+    /* forziamo tutto su una riga, se non ci sta va a capo naturalmente senza spezzare "a:" */
+    max-width: 600px;
+    word-break: keep-all;
+  }
+
+  /* "fino a:" stare sulla stessa riga */
+  .lp-hero-sub .nobr { white-space: nowrap; }
+
+  .lp-amount {
+    margin-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(90px, 22vw, 150px);
+    line-height: 1;
+    color: #39FF14;
+  }
+
+  .lp-btn {
+    margin-top: 28px;
+    display: inline-block;
+    background: #39FF14;
+    color: #000 !important;
+    font-weight: 700;
+    font-size: clamp(17px, 4.5vw, 22px);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 20px 52px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    transition: transform .15s, box-shadow .15s;
+    cursor: pointer;
+  }
+
+  .lp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(57,255,20,.3);
+  }
+
+  .lp-note {
+    margin-top: 14px;
+    font-size: clamp(15px, 3.5vw, 17px);
+    color: #888;
+  }
+
+  .lp-divider {
+    width: 100%;
+    height: 1px;
+    background: #1e1e1e;
+  }
+
+  /* ── SEZIONI ── */
+  .lp-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 52px 20px;
+    background: #0a0a0a;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .lp-inner { padding: 44px 16px; }
+    .lp-hero { padding: 40px 16px 36px; }
+  }
+
+  .lp-label {
+    font-size: clamp(13px, 3vw, 15px);
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #39FF14;
+    margin-bottom: 10px;
+  }
+
+  .lp-sec-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 11vw, 72px);
+    line-height: 1;
+    margin-bottom: 32px;
+    color: #f0f0f0;
+  }
+
+  /* ── STEPS ── */
+  .lp-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .lp-step-card {
+    border: 1px solid #1e1e1e;
+    border-radius: 14px;
+    padding: 22px 20px;
+    background: #111;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .lp-step-num {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #39FF14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: #39FF14;
+    flex-shrink: 0;
+  }
+
+  .lp-step-card h3 {
+    font-size: clamp(17px, 4vw, 20px);
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #f0f0f0;
+  }
+
+  .lp-step-card p {
+    font-size: clamp(15px, 3.5vw, 17px);
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* ── REVIEWS ── */
+  .lp-reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .lp-card {
+    background: #111111;
+    border: 1px solid #1e1e1e;
+    border-radius: 14px;
+    padding: 22px;
+  }
+
+  .lp-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+
+  .lp-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #39FF14;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .lp-rname { font-size: clamp(15px, 3.5vw, 17px); font-weight: 700; color: #f0f0f0; }
+  .lp-stars { font-size: 14px; color: #f5c518; margin-top: 3px; }
+  .lp-rtext { font-size: clamp(15px, 3.5vw, 16px); color: #888; line-height: 1.65; }
+
+  .lp-more-btn {
+    display: block;
+    margin: 28px auto 0;
+    background: transparent;
+    color: #39FF14 !important;
+    border: 2px solid #39FF14;
+    font-weight: 700;
+    font-size: clamp(15px, 3.5vw, 17px);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    text-align: center;
+    width: fit-content;
+    transition: background .15s, color .15s;
+  }
+
+  .lp-more-btn:hover { background: #39FF14; color: #000 !important; }
+
+  /* ── FAQ ── */
+  .lp-faq-list { display: flex; flex-direction: column; }
+
+  .lp-faq-item {
+    border-top: 1px solid #1e1e1e;
+    padding: 24px 0;
+  }
+
+  .lp-faq-item:last-child { border-bottom: 1px solid #1e1e1e; }
+
+  .lp-faq-q { font-size: clamp(16px, 4vw, 19px); font-weight: 600; margin-bottom: 8px; color: #f0f0f0; }
+  .lp-faq-a { font-size: clamp(14px, 3.5vw, 16px); color: #888; line-height: 1.6; }
+
+  /* ── BOTTOM CTA ── */
+  .lp-bottom {
+    padding: 36px 24px 64px;
+    text-align: center;
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, #0d2a0d 0%, transparent 70%);
+  }
+
+  .lp-bottom h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 16vw, 120px);
+    line-height: 1;
+    margin-bottom: 28px;
+    color: #f0f0f0;
+  }
+
+  .lp-bottom h2 span { color: #39FF14; }
+
+  .lp-bottom-note {
+    margin-top: 16px;
+    font-size: clamp(15px, 3.5vw, 17px);
+    color: #888;
+  }
+
+  .lp-footer {
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    border-top: 1px solid #1e1e1e;
+    background: #0a0a0a;
+  }
+</style>
+
+<div class="lp-wrap">
+
+  <!-- HERO -->
+  <div class="lp-hero">
+    <div class="lp-tag">Nessuna esperienza richiesta</div>
+    <h1>6 Bonus App<br><span>Un Unico</span><br>Vantaggio</h1>
+    <p class="lp-hero-sub">Scarica 6 app, sblocca i bonus di benvenuto e incassa:</p>
+    <div class="lp-amount">+150€</div>
+    <a href="https://t.me/LucaPuleo?text=Ciao+Luca%2C+voglio+iniziare+a+guadagnare+con+i+bonus+app!" class="lp-btn" target="_top">Inizia adesso →</a>
+    <p class="lp-note">Nessuna esperienza · Nessun Budget iniziale</p>
+  </div>
+
+  <div class="lp-divider"></div>
+
+  <!-- COME FUNZIONA -->
+  <div class="lp-inner">
+    <div class="lp-label">Come funziona</div>
+    <div class="lp-sec-title">3 passi. +150€.</div>
+    <div class="lp-steps">
+      <div class="lp-step-card">
+        <div class="lp-step-num">1</div>
+        <div>
+          <h3>Contattami</h3>
+          <p>Cliccando uno dei tasti verdi che trovi in questa pagina.</p>
+        </div>
+      </div>
+      <div class="lp-step-card">
+        <div class="lp-step-num">2</div>
+        <div>
+          <h3>Insieme a me sblocchi i bonus</h3>
+          <p>Segui gli step che ti darò per sbloccare il bonus su ciascuna app.</p>
+        </div>
+      </div>
+      <div class="lp-step-card">
+        <div class="lp-step-num">3</div>
+        <div>
+          <h3>Incassa</h3>
+          <p>I bonus arrivano direttamente sull'applicazione. Ti spiego come spostarli nel tuo conto principale e hai fatto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lp-divider"></div>
+
+  <!-- RECENSIONI -->
+  <div class="lp-inner">
+    <div class="lp-label">Cosa dicono</div>
+    <div class="lp-sec-title">Recensioni reali</div>
+    <div class="lp-reviews-grid">
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">V</div>
+          <div><div class="lp-rname">Vincenzo M.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Frate comunque io non so come ringraziarti perché ad oggi nonostante ho iniziato questo percorso con te mi hai fatto aprire gli occhi e soprattutto secondo me per ciò che fai e per il rispetto e la disponibilità che porti meriti di più"</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">A</div>
+          <div><div class="lp-rname">Aurora W.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ho fatto altri conti con altre persone ma mi hanno truffata e rubato soldi miei.. invece te sei stato onesto e non ho pagato nulla e mi sono arrivati i soldi e anche prelevati"</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">G</div>
+          <div><div class="lp-rname">Giovanni F.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ho avuto un'ottima esperienza grazie a Luca: mi ha guidato con professionalità nell'attivazione dell'app BBVA e, dopo pochi semplici passaggi guidato da lui, ho ricevuto il bonus. È stato chiaro, disponibile e davvero affidabile."</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">M</div>
+          <div><div class="lp-rname">Michele C.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ti posso dire che mi sono trovato molto bene. E i soldi sono davvero arrivati."</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">G</div>
+          <div><div class="lp-rname">Gurmant S.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"E' stato davvero molto facile e veloce, ti ringrazio per la tua totale trasparenza, è stato davvero davvero facilissimo 👌🏻👌🏻"</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">M</div>
+          <div><div class="lp-rname">Monica M.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ho collaborato con Luca e si è dimostrato con professionalità serietà e TANTA PAZIENZA. Trovare un ragazzo più che affidabile è un miracolo"</p>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/lucapuleo.bsn/" class="lp-more-btn" target="_top">Altre recensioni →</a>
+  </div>
+
+  <div class="lp-divider"></div>
+
+  <!-- FAQ -->
+  <div class="lp-inner">
+    <div class="lp-label">Domande frequenti</div>
+    <div class="lp-sec-title">Hai dubbi?</div>
+    <div class="lp-faq-list">
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Serve avere già esperienza?</div>
+        <div class="lp-faq-a">No. La strategia dei bonus app è completamente gratuita ed è nata apposta per persone che partono da zero, senza competenze e senza capitale. Ogni passaggio viene spiegato in modo semplice. Sbloccare i bonus, seguendo i miei step, è semplicissimo!</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Servono soldi per iniziare?</div>
+        <div class="lp-faq-a">Assolutamente no! Non è richiesto un investimento, si inizia da 0, sono app gratuite. È richiesto solo essere maggiorenni e avere un documento di identità valido.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">I bonus sono davvero gratuiti?</div>
+        <div class="lp-faq-a">Sì. Le app erogano bonus di benvenuto per incentivare le registrazioni. Non ci sono costi nascosti se segui correttamente la procedura.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Quanto tempo ci vuole?</div>
+        <div class="lp-faq-a">Mediamente 5–10 minuti per app. Puoi completare tutte e 6 in poco tempo e ricevere i bonus nei tempi indicati dall'app.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="lp-bottom">
+    <h2>Pronto a<br>incassare<br><span>+150€?</span></h2>
+    <a href="https://t.me/LucaPuleo?text=Ciao+Luca%2C+voglio+iniziare+a+guadagnare+con+i+bonus+app!" class="lp-btn" style="font-size:clamp(18px,4.5vw,24px);padding:22px 56px;" target="_top">Inizia adesso →</a>
+    <p class="lp-bottom-note">Clicca il tasto e inizia oggi stesso</p>
+  </div>
+
+  <div class="lp-footer">
+    © 2026 · Risultati variabili. I bonus dipendono dai T&C delle singole app.
+  </div>
+
+</div>
