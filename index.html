@@ -1,0 +1,930 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FL5MHPPWGH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FL5MHPPWGH');
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap');
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #0a0a0a !important;
+    border: none !important;
+    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .lp-wrap {
+    background: #0a0a0a;
+    color: #f0f0f0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lp-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── HERO ── */
+  .lp-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #0d2a0d 0%, transparent 70%);
+    width: 100%;
+  }
+
+  .lp-tag {
+    display: inline-block;
+    background: #39FF14;
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .lp-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(46px, 8.5vw, 110px);
+    line-height: .95;
+    color: #f0f0f0;
+  }
+
+
+  @media (max-width: 640px) {
+    .lp-hero h1 { font-size: clamp(40px, 10.5vw, 64px); }
+    .lp-tag { font-size: 10px; padding: 5px 12px; }
+    .lp-amount { font-size: clamp(80px, 20vw, 120px); }
+  }
+
+  .lp-hero h1 span { color: #39FF14; }
+
+  .lp-hero-sub {
+    margin-top: 16px;
+    font-size: clamp(16px, 4vw, 20px);
+    color: #888;
+    line-height: 1.5;
+    /* forziamo tutto su una riga, se non ci sta va a capo naturalmente senza spezzare "a:" */
+    max-width: 600px;
+    word-break: keep-all;
+  }
+
+  /* "fino a:" stare sulla stessa riga */
+  .lp-hero-sub .nobr { white-space: nowrap; }
+
+  .lp-amount {
+    margin-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(90px, 22vw, 150px);
+    line-height: 1;
+    color: #39FF14;
+  }
+
+  .lp-zero {
+    margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(16px, 3.5vw, 21px);
+    color: #aaaaaa;
+    letter-spacing: .02em;
+    font-weight: 500;
+  }
+
+  .lp-btn {
+    margin-top: 28px;
+    display: inline-block;
+    background: #39FF14;
+    color: #000 !important;
+    font-weight: 700;
+    font-size: clamp(14px, 3.5vw, 24px);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 18px 32px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    cursor: pointer;
+    animation: pulse-btn 1.8s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 641px) {
+    .lp-btn { padding: 24px 60px; font-size: clamp(19px, 3vw, 24px); }
+  }
+
+  .lp-btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    animation: shimmer 2.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-btn {
+    0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(57,255,20,0.5); }
+    50%  { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(57,255,20,0); }
+    100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(57,255,20,0); }
+  }
+
+  @keyframes shimmer {
+    0%   { left: -100%; }
+    60%  { left: 140%; }
+    100% { left: 140%; }
+  }
+
+  .lp-btn:hover {
+    animation: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(57,255,20,.4);
+  }
+
+  .lp-note {
+    margin-top: 14px;
+    font-size: clamp(15px, 3.5vw, 17px);
+    color: #888;
+  }
+
+  .lp-divider {
+    width: 100%;
+    height: 1px;
+    background: #1e1e1e;
+  }
+
+  /* ── SEZIONI ── */
+  .lp-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 52px 20px;
+    background: #0a0a0a;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .lp-inner { padding: 44px 16px; }
+    .lp-hero { padding: 40px 16px 36px; }
+  }
+
+  .lp-label {
+    font-size: clamp(13px, 3vw, 15px);
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #39FF14;
+    margin-bottom: 10px;
+  }
+
+  .lp-sec-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 11vw, 72px);
+    line-height: 1;
+    margin-bottom: 32px;
+    color: #f0f0f0;
+  }
+
+  /* ── STEPS ── */
+  .lp-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .lp-step-card {
+    border: 1px solid #1e1e1e;
+    border-radius: 14px;
+    padding: 22px 20px;
+    background: #111;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .lp-step-num {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #39FF14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: #39FF14;
+    flex-shrink: 0;
+  }
+
+  .lp-step-card h3 {
+    font-size: clamp(17px, 4vw, 20px);
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #f0f0f0;
+  }
+
+  .lp-step-card p {
+    font-size: clamp(15px, 3.5vw, 17px);
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* ── REVIEWS ── */
+  .lp-reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .lp-card {
+    background: #111111;
+    border: 1px solid #1e1e1e;
+    border-radius: 14px;
+    padding: 22px;
+  }
+
+  .lp-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+
+  .lp-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #39FF14;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .lp-rname { font-size: clamp(15px, 3.5vw, 17px); font-weight: 700; color: #f0f0f0; }
+  .lp-stars { font-size: 14px; color: #f5c518; margin-top: 3px; }
+  .lp-rtext { font-size: clamp(15px, 3.5vw, 16px); color: #888; line-height: 1.65; }
+
+  .lp-more-btn {
+    display: block;
+    margin: 28px auto 0;
+    background: transparent;
+    color: #39FF14 !important;
+    border: 2px solid #39FF14;
+    font-weight: 700;
+    font-size: clamp(15px, 3.5vw, 17px);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    text-align: center;
+    width: fit-content;
+    transition: background .15s, color .15s;
+  }
+
+  .lp-more-btn:hover { background: #39FF14; color: #000 !important; }
+
+  /* ── FAQ ── */
+  .lp-faq-list { display: flex; flex-direction: column; }
+
+  .lp-faq-item {
+    border-top: 1px solid #1e1e1e;
+    padding: 24px 0;
+  }
+
+  .lp-faq-item:last-child { border-bottom: 1px solid #1e1e1e; }
+
+  .lp-faq-q { font-size: clamp(16px, 4vw, 19px); font-weight: 600; margin-bottom: 8px; color: #f0f0f0; }
+  .lp-faq-a { font-size: clamp(14px, 3.5vw, 16px); color: #888; line-height: 1.6; }
+
+  /* ── BOTTOM CTA ── */
+  .lp-bottom {
+    padding: 36px 24px 64px;
+    text-align: center;
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, #0d2a0d 0%, transparent 70%);
+  }
+
+  .lp-bottom h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 16vw, 120px);
+    line-height: 1;
+    margin-bottom: 28px;
+    color: #f0f0f0;
+  }
+
+  .lp-bottom h2 span { color: #39FF14; }
+
+  .lp-bottom-note {
+    margin-top: 16px;
+    font-size: clamp(15px, 3.5vw, 17px);
+    color: #888;
+  }
+
+  .lp-footer {
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    border-top: 1px solid #1e1e1e;
+    background: #0a0a0a;
+  }
+
+  /* Frecce neon laterali */
+  .lp-arrow { display: none; }
+
+  .lp-btn-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .lp-neon-arrow {
+    font-size: clamp(44px, 11vw, 68px);
+    color: #39FF14;
+    text-shadow:
+      0 0 8px #39FF14,
+      0 0 20px #39FF14,
+      0 0 40px #39FF14,
+      0 0 60px #39FF14;
+    animation: neon-pulse 1.4s ease-in-out infinite;
+    user-select: none;
+    line-height: 1;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-top: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 6px;
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% { opacity: 1;   text-shadow: 0 0 6px #39FF14, 0 0 14px #39FF14, 0 0 28px #39FF14; }
+    50%       { opacity: 0.5; text-shadow: 0 0 3px #39FF14, 0 0 8px #39FF14; }
+  }
+
+  /* CTA ripetuto nelle sezioni */
+  .lp-section-cta {
+    text-align: center;
+    margin-top: 36px;
+  }
+</style>
+
+<div class="lp-wrap">
+
+  <!-- HERO -->
+  <div class="lp-hero">
+    <div class="lp-tag" style="font-weight:900;letter-spacing:.1em;">Il metodo che nessuno ti ha mai detto</div>
+    <h1>Scarica 6 app gratuite.<br><span>Segui i miei step.</span><br>Incassa:</h1>
+    
+    <div class="lp-amount">+150€</div>
+    <p class="lp-zero">Partendo da zero. Nessuna esperienza. Nessun investimento.</p>
+    <div class="lp-btn-wrap">
+      <span class="lp-neon-arrow">→</span>
+      <a href="https://t.me/BonusAppLucaPuleoBot?start=bonusapp" class="lp-btn" target="_top">Clicca qui, ti guido gratis</a>
+      <span class="lp-neon-arrow">←</span>
+    </div>
+    <p class="lp-note"></p>
+  </div>
+
+
+  <!-- COUNTER -->
+  <div style="background:#0a0a0a;padding:32px 24px;text-align:center;border-bottom:1px solid #1e1e1e;">
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,8vw,64px);color:#39FF14;line-height:1;margin:0;">+<span id="lp-counter">0</span> persone</p>
+    <p style="font-size:clamp(14px,3vw,16px);color:#ffffff;margin-top:6px;">hanno già sbloccato i loro bonus con me</p>
+  </div>
+  <script>
+    (function(){
+      var target = 458, duration = 2500, start = null;
+      var el = document.getElementById("lp-counter");
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(ease * target);
+        if(progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      var obs = new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting){ requestAnimationFrame(step); obs.disconnect(); }
+      }, {threshold: 0.5});
+      obs.observe(el);
+    })();
+  </script>
+
+  <div class="lp-divider"></div>
+
+  <!-- COSA SONO I BONUS APP -->
+  <div class="lp-inner">
+    <div class="lp-label">Cosa sono</div>
+    <div class="lp-sec-title">Bonus app, spiegazione.</div>
+    <p style="font-size:clamp(15px,3.5vw,18px);color:#888;line-height:1.75;max-width:640px;">
+      Le app bancarie fanno a gara per acquisire nuovi clienti. Per farlo, offrono <span style="color:#f0f0f0;font-weight:700;">bonus in denaro reale o buoni Amazon</span>, a chiunque apra un conto e completi pochi semplici passaggi — che farai insieme a me.<br><br>
+      Sono promozioni ufficiali, scritte nei termini e condizioni di ogni app, pensate esattamente per persone come te.<br><br>
+      Il trucco? <span style="color:#39FF14;font-weight:700;">La maggior parte delle persone non sa che esistono. Noi sì.</span>
+    </p>
+  </div>
+
+
+  <div class="lp-divider"></div>
+
+  <!-- CHI SONO -->
+  <div class="lp-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+    <div class="lp-label">Chi sono</div>
+    <div class="lp-sec-title" style="margin-bottom:24px;">Il tuo riferimento<br>per i bonus app.</div>
+    <img src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/photo_2026-06-03_00-51-28.jpg"
+         alt="Luca Puleo"
+         style="width:200px;height:200px;object-fit:cover;object-position:top;border-radius:50%;border:3px solid #39FF14;margin-bottom:28px;display:block;">
+    <p style="font-size:clamp(17px,3.5vw,20px);font-weight:700;color:#f0f0f0;margin-bottom:4px;">Luca Puleo ✓</p>
+    <p style="font-size:clamp(15px,3.5vw,17px);color:#888;line-height:1.75;max-width:560px;">
+      Ho analizzato decine di app bancarie e di investimento per identificare quelle che offrono i <span style="color:#f0f0f0;font-weight:700;">bonus di benvenuto più alti e più semplici da sbloccare.</span><br><br>
+      Con <span style="color:#39FF14;font-weight:700;">3 anni di esperienza nel settore</span>, ho costruito un metodo preciso, passo dopo passo, che permette a chiunque — anche partendo da zero — di sbloccare tutti i bonus in poco tempo e trasferire i soldi sul proprio conto principale.<br><br>
+      <span style="color:#39FF14;font-weight:700;">Nessuna competenza richiesta.</span>
+    </p>
+  <div class="lp-section-cta">
+      <a href="https://t.me/BonusAppLucaPuleoBot?start=bonusapp" class="lp-btn" target="_top">Clicca qui, ti guido gratis →</a>
+    </div>
+  </div>
+
+  <div class="lp-divider"></div>
+
+  <!-- COME FUNZIONA -->
+  <div class="lp-inner">
+    <div class="lp-label">Come funziona</div>
+    <div class="lp-sec-title">3 passi. +150€.</div>
+    <div class="lp-steps">
+      <div class="lp-step-card">
+        <div class="lp-step-num">1</div>
+        <div>
+          <h3>Contattami</h3>
+          <p>Cliccando uno dei tasti verdi che trovi in questa pagina. Ti porterà su Telegram, clicca il pulsante in basso e hai fatto.</p>
+        </div>
+      </div>
+      <div class="lp-step-card">
+        <div class="lp-step-num">2</div>
+        <div>
+          <h3>Insieme a me sblocchi i bonus</h3>
+          <p>Segui gli step che ti darò per sbloccare il bonus su ciascuna app.</p>
+        </div>
+      </div>
+      <div class="lp-step-card">
+        <div class="lp-step-num">3</div>
+        <div>
+          <h3>Incassa</h3>
+          <p>I bonus arrivano direttamente sull'applicazione. Ti spiego come spostarli nel tuo conto principale e hai fatto.</p>
+        </div>
+      </div>
+    </div>
+  <div class="lp-section-cta">
+      <a href="https://t.me/BonusAppLucaPuleoBot?start=bonusapp" class="lp-btn" target="_top">Clicca qui, ti guido gratis →</a>
+    </div>
+  </div>
+
+
+  <div class="lp-divider"></div>
+
+  <!-- RISULTATI REALI -->
+  <div class="lp-inner">
+    <div class="lp-label">Prove</div>
+    <div class="lp-sec-title">Risultati reali.</div>
+    <p style="font-size:clamp(14px,3vw,16px);color:#888;margin-bottom:24px;line-height:1.6;">Screenshot reali dei bonus ricevuti. Risultati personali, i tuoi possono variare.</p>
+    <div style="column-count:2;column-gap:12px;">
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%281%29.jpeg" alt="Risultato 1" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%282%29.jpeg" alt="Risultato 2" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%283%29.jpeg" alt="Risultato 3" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%284%29.jpeg" alt="Risultato 4" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%285%29.jpeg" alt="Risultato 5" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%286%29.jpeg" alt="Risultato 6" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%287%29.jpeg" alt="Risultato 7" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%288%29.jpeg" alt="Risultato 8" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%289%29.jpeg" alt="Risultato 9" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/risultati%20%2810%29.jpeg" alt="Risultato 10" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+  </div>
+
+  <div class="lp-divider"></div>
+
+  <!-- FEEDBACK REALI -->
+  <div class="lp-inner">
+    <div class="lp-label">Recensioni</div>
+    <div class="lp-sec-title">Recensioni reali.</div>
+    <p style="font-size:clamp(14px,3vw,16px);color:#888;margin-bottom:24px;line-height:1.6;">Messaggi reali ricevuti da persone che hanno sbloccato i loro bonus.</p>
+    <div style="column-count:2;column-gap:12px;">
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback.jpeg" alt="Feedback 1" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%282%29.jpeg" alt="Feedback 2" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%283%29.jpeg" alt="Feedback 3" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%284%29.jpeg" alt="Feedback 4" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%285%29.jpeg" alt="Feedback 5" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%286%29.jpeg" alt="Feedback 6" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%287%29.jpeg" alt="Feedback 7" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%288%29.jpeg" alt="Feedback 8" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%289%29.jpeg" alt="Feedback 9" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2810%29.jpeg" alt="Feedback 10" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2811%29.jpeg" alt="Feedback 11" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2812%29.jpeg" alt="Feedback 12" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2813%29.jpeg" alt="Feedback 13" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2814%29.jpeg" alt="Feedback 14" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2815%29.jpeg" alt="Feedback 15" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2816%29.jpeg" alt="Feedback 16" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2817%29.jpeg" alt="Feedback 17" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2818%29.jpeg" alt="Feedback 18" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2819%29.jpeg" alt="Feedback 19" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2820%29.jpeg" alt="Feedback 20" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2821%29.jpeg" alt="Feedback 21" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2822%29.jpeg" alt="Feedback 22" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2823%29.jpeg" alt="Feedback 23" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2824%29.jpeg" alt="Feedback 24" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2825%29.jpeg" alt="Feedback 25" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2826%29.jpeg" alt="Feedback 26" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2827%29.jpeg" alt="Feedback 27" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #1e1e1e;break-inside:avoid;margin-bottom:12px;display:inline-block;width:100%;">
+        <img style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" src="https://raw.githubusercontent.com/lucaciucio-coder/Bonus-app-landing/main/feedback%20%2828%29.jpeg" alt="Feedback 28" style="width:100%;height:auto;object-fit:contain;display:block;background:#000;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+    <div class="lp-section-cta">
+      <a href="https://t.me/BonusAppLucaPuleoBot?start=bonusapp" class="lp-btn" target="_top">Clicca qui, ti guido gratis →</a>
+    </div>
+  </div>
+  <div class="lp-divider"></div>
+
+  <!-- FAQ -->
+  <div class="lp-inner">
+    <div class="lp-label">Domande frequenti</div>
+    <div class="lp-sec-title">Hai dubbi?</div>
+    <div class="lp-faq-list">
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Serve avere già esperienza?</div>
+        <div class="lp-faq-a">No. La strategia dei bonus app è completamente gratuita ed è nata apposta per persone che partono da zero, senza competenze e senza capitale. Ogni passaggio viene spiegato in modo semplice. Sbloccare i bonus, seguendo i miei step, è semplicissimo!</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Servono soldi per iniziare?</div>
+        <div class="lp-faq-a">Assolutamente no! Non è richiesto un investimento, si inizia da 0, sono app gratuite. È richiesto solo essere maggiorenni e avere un documento di identità valido.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">I bonus sono davvero gratuiti?</div>
+        <div class="lp-faq-a">Sì. Le app erogano bonus di benvenuto per incentivare le registrazioni. Non ci sono costi nascosti se segui correttamente la procedura.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Quanto tempo ci vuole?</div>
+        <div class="lp-faq-a">Mediamente 5–10 minuti per app. Puoi completare tutte e 6 in poco tempo e ricevere i bonus nei tempi indicati dall'app.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Come funziona il pagamento dei bonus?</div>
+        <div class="lp-faq-a">I bonus vengono accreditati direttamente sull'app che hai aperto — ognuna ha i suoi tempi, solitamente pochi giorni. Una volta ricevuti, ti spiego come trasferirli sul tuo conto bancario principale in pochi semplici passaggi.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lp-divider"></div>
+
+  <!-- RECENSIONI -->
+  <div class="lp-inner">
+    <div class="lp-label">Cosa dicono</div>
+    <div class="lp-sec-title">Feedback:</div>
+    <div class="lp-reviews-grid">
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">V</div>
+          <div><div class="lp-rname">Vincenzo M.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Frate comunque io non so come ringraziarti perché ad oggi nonostante ho iniziato questo percorso con te mi hai fatto aprire gli occhi e soprattutto secondo me per ciò che fai e per il rispetto e la disponibilità che porti meriti di più"</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">A</div>
+          <div><div class="lp-rname">Aurora W.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ho fatto altri conti con altre persone ma mi hanno truffata e rubato soldi miei.. invece te sei stato onesto e non ho pagato nulla e mi sono arrivati i soldi e anche prelevati"</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">G</div>
+          <div><div class="lp-rname">Giovanni F.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ho avuto un'ottima esperienza grazie a Luca: mi ha guidato con professionalità nell'attivazione dell'app BBVA e, dopo pochi semplici passaggi guidato da lui, ho ricevuto il bonus. È stato chiaro, disponibile e davvero affidabile."</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">M</div>
+          <div><div class="lp-rname">Michele C.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ti posso dire che mi sono trovato molto bene. E i soldi sono davvero arrivati."</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">G</div>
+          <div><div class="lp-rname">Gurmant S.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"E' stato davvero molto facile e veloce, ti ringrazio per la tua totale trasparenza, è stato davvero davvero facilissimo 👌🏻👌🏻"</p>
+      </div>
+      <div class="lp-card">
+        <div class="lp-card-head">
+          <div class="lp-avatar">M</div>
+          <div><div class="lp-rname">Monica M.</div><div class="lp-stars">★★★★★</div></div>
+        </div>
+        <p class="lp-rtext">"Ho collaborato con Luca e si è dimostrato con professionalità serietà e TANTA PAZIENZA. Trovare un ragazzo più che affidabile è un miracolo"</p>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/lucapuleo.bsn/" class="lp-more-btn" target="_top">Altre recensioni →</a>
+  </div>
+
+
+  <!-- BOTTOM CTA -->
+  <div class="lp-bottom">
+    <h2>Pronto a<br>incassare<br><span>+150€?</span></h2>
+    <div style="display:flex;justify-content:center;margin-top:28px;">
+      <a href="https://t.me/BonusAppLucaPuleoBot?start=bonusapp" class="lp-btn" style="font-size:clamp(18px,4.5vw,24px);padding:22px 56px;margin-top:0;" target="_top">Clicca qui, ti guido gratis</a>
+    </div>
+    <p class="lp-bottom-note">Clicca il tasto e inizia oggi stesso</p>
+  </div>
+
+  <div style="background:#0a0a0a;border-top:1px solid #1e1e1e;padding:40px 24px;text-align:center;">
+    <p style="font-size:clamp(13px,3vw,15px);color:#888;margin-bottom:20px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">Seguimi su</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <a href="https://www.instagram.com/lucapuleo.bsn/" target="_top" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:#111;border:1px solid #1e1e1e;border-radius:50px;padding:14px 28px;transition:border-color .2s;width:fit-content;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+              <stop offset="0%" stop-color="#fdf497"/>
+              <stop offset="10%" stop-color="#fdf497"/>
+              <stop offset="50%" stop-color="#fd5949"/>
+              <stop offset="68%" stop-color="#d6249f"/>
+              <stop offset="100%" stop-color="#285AEB"/>
+            </radialGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig-grad)"/>
+          <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/>
+          <circle cx="17.2" cy="6.8" r="1.2" fill="white"/>
+        </svg>
+        <span style="font-size:clamp(15px,3.5vw,17px);font-weight:700;color:#f0f0f0;">@lucapuleo.bsn</span>
+      </a>
+      <a href="https://www.youtube.com/@LucaPuleoo" target="_top" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:#111;border:1px solid #1e1e1e;border-radius:50px;padding:14px 28px;transition:border-color .2s;width:fit-content;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="5" width="20" height="14" rx="4" fill="#FF0000"/>
+          <polygon points="10,9 10,15 16,12" fill="white"/>
+        </svg>
+        <span style="font-size:clamp(15px,3.5vw,17px);font-weight:700;color:#f0f0f0;">@LucaPuleoo</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="lp-footer">
+    © 2026 · Risultati variabili. I bonus dipendono dai T&C delle singole app.
+  
+  <!-- MONEY RAIN + NOTIFICHE -->
+  <style>
+      5%   { opacity: 0.12; }
+      90%  { opacity: 0.08; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Notifiche */
+    .lp-notif-wrap {
+      position: fixed;
+      bottom: 24px;
+      left: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .lp-notif {
+      background: #111;
+      border: 1px solid #39FF14;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 280px;
+      box-shadow: 0 4px 20px rgba(57,255,20,.15);
+      transform: translateX(-320px);
+      opacity: 0;
+      transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .4s ease;
+    }
+
+    @media (max-width: 640px) {
+      .lp-notif {
+        max-width: 200px;
+        padding: 8px 10px;
+        gap: 8px;
+        border-radius: 8px;
+      }
+      .lp-notif-avatar {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 11px !important;
+      }
+      .lp-notif-name { font-size: 11px !important; }
+      .lp-notif-msg  { font-size: 10px !important; }
+      .lp-notif-time { font-size: 9px !important; }
+    }
+
+    .lp-notif.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .lp-notif-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #39FF14;
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .lp-notif-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lp-notif-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f0f0f0;
+    }
+
+    .lp-notif-msg {
+      font-size: 12px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .lp-notif-time {
+      font-size: 11px;
+      color: #39FF14;
+      margin-top: 3px;
+    }
+  </style>
+
+
+  <!-- Notifiche container -->
+  <div class="lp-notif-wrap" id="notifWrap"></div>
+
+  <script>
+
+    // ── NOTIFICHE ──
+    (function(){
+      var notifiche = [
+        { name: 'Marco R.',  city: 'Milano',   msg: 'ha ricevuto 15€ su Revolut 💵',              time: 'proprio ora' },
+        { name: 'Sara T.',   city: 'Roma',      msg: 'ha ricevuto 10€ su BBVA 💵',                time: '4 min fa' },
+        { name: 'Luca M.',   city: 'Napoli',    msg: 'ha ricevuto un buono Amazon da 30€ con Isybank 🛒', time: '8 min fa' },
+        { name: 'Giulia P.', city: 'Torino',    msg: 'ha ricevuto 50€ su BuddyBank 💵',           time: '13 min fa' },
+        { name: 'Andrea F.', city: 'Palermo',   msg: 'ha ricevuto un buono Amazon da 50€ con Credit Agricole 🛒', time: '19 min fa' },
+        { name: 'Chiara B.', city: 'Bologna',   msg: 'ha ricevuto 10$ su Kraken 💵',              time: '23 min fa' },
+        { name: 'Davide C.', city: 'Firenze',   msg: 'ha sbloccato tutti e 6 i bonus ✅',          time: '6 min fa' },
+        { name: 'Elena V.',  city: 'Venezia',   msg: 'ha ricevuto 15€ su Revolut 💵',             time: '2 min fa' },
+        { name: 'Simone L.', city: 'Catania',   msg: 'ha ricevuto 50€ su BuddyBank 💵',           time: '10 min fa' },
+        { name: 'Martina G.',city: 'Bari',      msg: 'ha ricevuto 10€ su BBVA 💵',                time: '16 min fa' },
+        { name: 'Filippo R.',city: 'Genova',    msg: 'ha ricevuto un buono Amazon da 30€ con Isybank 🛒', time: '21 min fa' },
+        { name: 'Alessia C.',city: 'Verona',    msg: 'ha ricevuto un buono Amazon da 50€ con Credit Agricole 🛒', time: '27 min fa' },
+      ];
+
+      var wrap = document.getElementById('notifWrap');
+      var idx = Math.floor(Math.random() * notifiche.length);
+
+      function showNotif(){
+        var data = notifiche[idx % notifiche.length];
+        idx++;
+
+        var el = document.createElement('div');
+        el.className = 'lp-notif';
+
+        var av = document.createElement('div');
+        av.className = 'lp-notif-avatar';
+        av.textContent = data.name.charAt(0);
+
+        var txt = document.createElement('div');
+        txt.className = 'lp-notif-text';
+        txt.innerHTML =
+          '<span class="lp-notif-name">' + data.name + ' · ' + data.city + '</span>' +
+          '<span class="lp-notif-msg">' + data.msg + '</span>' +
+          '<span class="lp-notif-time">⏱ ' + data.time + '</span>';
+
+        el.appendChild(av);
+        el.appendChild(txt);
+        wrap.appendChild(el);
+
+        setTimeout(function(){ el.classList.add('show'); }, 50);
+
+        setTimeout(function(){
+          el.classList.remove('show');
+          setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 500);
+        }, 5000);
+      }
+
+      // Prima notifica dopo 3s, poi ogni 9s
+      setTimeout(function(){
+        showNotif();
+        setInterval(showNotif, 14000);
+      }, 4000);
+    })();
+  </script>
+
+</div>
+
+</div>
